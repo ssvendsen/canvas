@@ -2,7 +2,6 @@
 
 var randomData = Array.from({ length: 10000 }, () => Math.floor(Math.random() * 200))
 
-
 var initiatePlot = function (div) {
 
     var canvas = div.querySelector(".canvas");
@@ -42,7 +41,7 @@ var initiatePlot = function (div) {
         var now = performance.now()
         var periodMs = now - start
         var fps = count / periodMs * 1000
-        metrix.innerText = canvas.width + " " + canvas.height + " " + fps.toPrecision(2)
+        metrix.innerText = canvas.width + "x" + canvas.height + " " + fps.toPrecision(2) + "fps"
         count = 0
         start = now
     }
